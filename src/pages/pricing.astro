@@ -1,0 +1,249 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Pricing">
+  <div class="page-header container">
+    <h1 class="page-title">Enterprise-grade <span class="text-gradient">ROI</span></h1>
+    <p class="page-desc">Strategic pricing models that scale with your business operations. MeatFlow consolidates fragmented tools into a single, high-performance platform.</p>
+  </div>
+
+  <section class="container pb-12">
+    <div class="pricing-grid">
+      <!-- Starter Plan -->
+      <div class="pricing-card glass-panel">
+        <h3 class="plan-name">Starter</h3>
+        <p class="plan-desc">For single-location artisan shops.</p>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">500</span>
+          <span class="period">/month</span>
+        </div>
+        <div class="plan-setup">+ $3,900 professional setup</div>
+        
+        <ul class="plan-features">
+          <li>✓ Branded Mobile App (iOS/Android)</li>
+          <li>✓ Square / Toast Integration</li>
+          <li>✓ Customer CRM & Profiles</li>
+          <li>✓ Online Ordering Platform</li>
+          <li>✓ Standard Analytics</li>
+        </ul>
+        <a href="/contact" class="btn btn-secondary btn-full">Get Started</a>
+      </div>
+
+      <!-- Professional Plan -->
+      <div class="pricing-card glass-panel featured">
+        <div class="featured-badge">Most Popular</div>
+        <h3 class="plan-name">Professional</h3>
+        <p class="plan-desc">For high-volume urban markets.</p>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">850</span>
+          <span class="period">/month</span>
+        </div>
+        <div class="plan-setup">+ $5,500 professional setup</div>
+        
+        <ul class="plan-features">
+          <li><strong>Everything in Starter, plus:</strong></li>
+          <li>✓ AI Virtual Assistant</li>
+          <li>✓ Automated SMS/Email Marketing</li>
+          <li>✓ Tiered Loyalty Programs</li>
+          <li>✓ Push Notification Campaigns</li>
+          <li>✓ Advanced RFM Analytics</li>
+        </ul>
+        <a href="/contact" class="btn btn-primary btn-full">Get Started</a>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="pricing-card glass-panel">
+        <h3 class="plan-name">Premium</h3>
+        <p class="plan-desc">For multi-location retail networks.</p>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">1,500</span>
+          <span class="period">/month</span>
+        </div>
+        <div class="plan-setup">+ $9,000 professional setup</div>
+        
+        <ul class="plan-features">
+          <li><strong>Everything in Professional, plus:</strong></li>
+          <li>✓ Multi-Store Inventory Sync</li>
+          <li>✓ Unified Admin Dashboard</li>
+          <li>✓ Developer API & Webhooks</li>
+          <li>✓ Priority Engineering Support</li>
+          <li>✓ Custom Marketing Triggers</li>
+        </ul>
+        <a href="/contact" class="btn btn-secondary btn-full">Get Started</a>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="pricing-card glass-panel">
+        <h3 class="plan-name">Enterprise</h3>
+        <p class="plan-desc">For franchises and large networks.</p>
+        <div class="plan-price">
+          <span class="amount text-gradient">Custom</span>
+        </div>
+        <div class="plan-setup">Volume-based pricing model</div>
+        
+        <ul class="plan-features">
+          <li><strong>Everything in Premium, plus:</strong></li>
+          <li>✓ Custom ERP Integrations</li>
+          <li>✓ Single Sign-On (SSO)</li>
+          <li>✓ Dedicated Account Manager</li>
+          <li>✓ Custom SLA & 99.99% Uptime</li>
+          <li>✓ White-Glove Onboarding</li>
+        </ul>
+        <a href="/enterprise" class="btn btn-secondary btn-full">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="container py-8 text-center faq-preview">
+    <p class="pricing-note text-muted mt-base">
+      Final pricing depends on specific configuration, integration architecture, and total business volume. 
+      Professional setup includes comprehensive POS data synchronization, app store submission management, and white-glove onboarding.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    text-align: center;
+    padding: var(--space-12) 0 var(--space-8);
+  }
+  
+  .page-title {
+    font-size: 3.5rem;
+    margin-bottom: var(--space-4);
+  }
+  
+  .page-desc {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .pb-12 { padding-bottom: var(--space-12); }
+  .py-8 { padding: var(--space-8) 0; }
+  .mt-base { margin-top: var(--space-4); }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+    align-items: stretch;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .pricing-card {
+    padding: var(--space-6) var(--space-4);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+  }
+
+  .pricing-card.featured {
+    transform: scale(1.02);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.15);
+    background: linear-gradient(180deg, var(--bg-card), rgba(249, 115, 22, 0.03));
+    z-index: 10;
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-primary);
+    color: white;
+    padding: 2px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .plan-name {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-2);
+  }
+  
+  .plan-desc {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    min-height: 40px;
+    margin-bottom: var(--space-4);
+  }
+  
+  .plan-price {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: var(--space-2);
+  }
+  
+  .currency {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 4px;
+  }
+  
+  .amount {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  
+  .period {
+    color: var(--text-muted);
+    margin-left: 4px;
+  }
+  
+  .plan-setup {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-8);
+  }
+  
+  .plan-features {
+    list-style: none;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-bottom: var(--space-8);
+  }
+  
+  .plan-features li {
+    font-size: 0.95rem;
+    color: var(--text-main);
+  }
+  
+  .plan-features strong {
+    color: var(--text-main);
+  }
+
+  .btn-full {
+    width: 100%;
+  }
+
+  .faq-preview {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1024px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+    .pricing-card.featured {
+      transform: scale(1);
+    }
+  }
+</style>

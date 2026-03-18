@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+const featuresList = [
+  { icon: "📱", title: "Custom Mobile Apps", desc: "Branded iOS and Android applications designed for high-conversion mobile ordering." },
+  { icon: "🛍️", title: "Online Ordering", desc: "A frictionless checkout experience optimized for complex meat retail and custom cuts." },
+  { icon: "👥", title: "Customer CRM", desc: "Automated profile building using digital and in-store behavioral data." },
+  { icon: "🎯", title: "Marketing Automation", desc: "Trigger SMS and email campaigns based on purchase frequency and customer history." },
+  { icon: "⭐", title: "Loyalty Programs", desc: "Tiered rewards and digital points systems integrated directly into the checkout flow." },
+  { icon: "🧠", title: "AI Assistant", desc: "Intelligent virtual support to help customers discover products and pairing suggestions." },
+  { icon: "🏢", title: "Multi-Store Control", desc: "Manage multiple locations with centralized menu, inventory, and pricing sync." },
+  { icon: "📊", title: "Advanced Analytics", desc: "Deep insights into sales trends, campaign performance, and customer lifetime value." },
+  { icon: "⚙️", title: "Custom Logic", desc: "Configure pricing by weight, piece, or variation with granular control." },
+  { icon: "🧩", title: "Upsell Modules", desc: "Integrated cross-selling for sides, rubs, and marinades during the ordering process." },
+  { icon: "🛡️", title: "Enterprise Grade", desc: "Role-based permissions, API webhooks, and dedicated security protocols." },
+  { icon: "🔌", title: "POS Integration", desc: "Native connectivity with Square, Toast, Clover, and Lightspeed." }
+];
+---
+
+<Layout title="Platform Features">
+  <div class="page-header container">
+    <h1 class="page-title">Complete Feature Set</h1>
+    <p class="page-desc">MeatFlow provides everything you need to run a modern, highly profitable meat retail operation.</p>
+  </div>
+
+  <section class="container pb-12">
+    <div class="features-grid">
+      {featuresList.map(feature => (
+        <Card title={feature.title} description={feature.desc} icon={feature.icon} />
+      ))}
+    </div>
+  </section>
+  
+  <section class="container py-8 text-center text-muted">
+    <p>Need a custom integration? <a href="/contact" class="text-gradient-accent">Talk to our engineering team</a>.</p>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    text-align: center;
+    padding: var(--space-12) 0 var(--space-8);
+  }
+  
+  .page-title {
+    font-size: 3rem;
+    margin-bottom: var(--space-4);
+  }
+  
+  .page-desc {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+  }
+  
+  .pb-12 { padding-bottom: var(--space-12); }
+  .py-8 { padding: var(--space-8) 0; }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+
+  @media (max-width: 1024px) {
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .features-grid { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="POS & API Integrations">
+  <div class="page-header container">
+    <h1 class="page-title">Works with leading <span class="text-gradient">POS systems</span></h1>
+    <p class="page-desc">MeatFlow connects directly to your existing digital infrastructure. No need to replace your POS hardware. 
+    Our platform sits on top of your current system to add advanced automation and mobile commerce.</p>
+  </div>
+
+  <section class="container pb-12 pt-8">
+    <div class="integrations-grid">
+      <div class="integration-card glass-panel">
+        <div class="logo">Square</div>
+        <p>Full catalog sync, inventory tracking, and unified reporting natively built for Square for Retail.</p>
+      </div>
+      <div class="integration-card glass-panel">
+        <div class="logo">Toast</div>
+        <p>Direct POS injection for orders. Perfect for hybrid butcher/restaurant operations.</p>
+      </div>
+      <div class="integration-card glass-panel">
+        <div class="logo">Clover</div>
+        <p>Real-time menu synchronization and bi-directional customer data flow.</p>
+      </div>
+      <div class="integration-card glass-panel">
+        <div class="logo">Lightspeed</div>
+        <p>Support for Lightspeed complex variations, weighed items, and matrix inventory.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-12">
+    <div class="developer-section glass-panel">
+      <div class="dev-content">
+        <h2>Developer API & Webhooks</h2>
+        <p>Need to connect MeatFlow to your ERP (NetSuite, SAP) or custom inventory management system? Our RESTful API and real-time event webhooks make it possible.</p>
+        <ul class="dev-list">
+          <li>✓ 99.99% Uptime SLA</li>
+          <li>✓ Scalable microservices architecture</li>
+          <li>✓ Real-time inventory webhooks</li>
+          <li>✓ Custom payment gateway support</li>
+        </ul>
+        <a href="/contact" class="btn btn-secondary mt-base">View API Docs</a>
+      </div>
+      <div class="dev-visual">
+        <pre><code>{`{
+  "event": "order.created",
+  "data": {
+    "order_id": "mf_9f82kd",
+    "location_id": "loc_nyc_01",
+    "total": 145.50,
+    "items": [
+      {
+        "id": "item_ribeye",
+        "weight_lbs": 2.5
+      }
+    ]
+  }
+}`}</code></pre>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    text-align: center;
+    padding: var(--space-12) 0 var(--space-8);
+  }
+  
+  .page-title {
+    font-size: 3.5rem;
+    margin-bottom: var(--space-4);
+  }
+  
+  .page-desc {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .pb-12 { padding-bottom: var(--space-12); }
+  .pt-8 { padding-top: var(--space-8); }
+  .py-12 { padding: var(--space-12) 0; }
+  .mt-base { margin-top: var(--space-4); }
+
+  .integrations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+  
+  .integration-card {
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+  
+  .integration-card .logo {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .integration-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* Developer Section */
+  .developer-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+    padding: var(--space-8);
+    align-items: center;
+  }
+
+  .dev-content h2 {
+    font-size: 2rem;
+    margin-bottom: var(--space-4);
+  }
+
+  .dev-content p {
+    color: var(--text-muted);
+    margin-bottom: var(--space-6);
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+
+  .dev-list {
+    list-style: none;
+    margin-bottom: var(--space-6);
+    color: var(--text-main);
+  }
+
+  .dev-list li {
+    margin-bottom: var(--space-2);
+  }
+
+  .dev-visual {
+    background: #000;
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255,255,255,0.1);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: #a5d6ff;
+    overflow-x: auto;
+  }
+
+  @media (max-width: 900px) {
+    .integrations-grid { grid-template-columns: 1fr; }
+    .developer-section { grid-template-columns: 1fr; }
+  }
+</style>

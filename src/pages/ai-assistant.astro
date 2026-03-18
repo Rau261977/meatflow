@@ -1,0 +1,176 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FeatureBlock from '../components/FeatureBlock.astro';
+---
+
+<Layout title="AI Assistant">
+  <div class="page-header container">
+    <div class="badge inline-badge">Intelligent Automation</div>
+    <h1 class="page-title">The Industry's First <span class="text-gradient">AI Virtual Assistant</span></h1>
+    <p class="page-desc">Enhance the customer experience with an intelligent assistant that handles inquiries, recommends products, and increases average order value.</p>
+  </div>
+
+  <section class="container pb-12 pt-8">
+    <FeatureBlock
+      title="Never lose an upsell again"
+      description="Your staff is busy. The MeatFlow AI assistant is always available inside your branded app to help customers figure out exactly what they need for their weekend BBQ."
+      subtext="Cut Recommendations"
+    >
+      <div slot="actions">
+        <ul class="benefit-list">
+          <li>✓ <strong>Suggests cuts:</strong> "What's a cheaper alternative to Ribeye?"</li>
+          <li>✓ <strong>Suggests quantities:</strong> "I'm feeding 6 people brisket, how many pounds?"</li>
+          <li>✓ <strong>Suggests recipes:</strong> Pairs preparations automatically.</li>
+        </ul>
+      </div>
+      <div slot="visual" class="chat-mockup glass-panel">
+        <div class="chat-header">Interactive Chat</div>
+        <div class="chat-body">
+          <div class="msg user">How much pulled pork do I need for 12 adults?</div>
+          <div class="msg ai">For 12 adults, you should plan for about 1/2 pound of cooked meat per person. Since pork shoulder yields about 50% after trimming and cooking, I recommend buying a 12-pound Boston Butt. Would you like me to add that to your cart?</div>
+        </div>
+      </div>
+    </FeatureBlock>
+
+    <FeatureBlock
+      reverse={true}
+      title="Automated Customer Support"
+      image="/meatflow_ai_assistant_visual_1773873939357.png"
+      description="Train the AI on your specific store policies, hours, and sourcing. It handles repetitive customer questions instantly, reducing phone calls to your counter."
+      subtext="Autonomous & Personal"
+    >
+      <div slot="actions">
+        <div class="mt-base">
+          <a href="/contact" class="btn btn-primary">Try the AI Demo</a>
+        </div>
+      </div>
+    </FeatureBlock>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    text-align: center;
+    padding: var(--space-12) 0 var(--space-8);
+  }
+  
+  .inline-badge {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-primary);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .page-title {
+    font-size: 3.5rem;
+    margin-bottom: var(--space-4);
+  }
+  
+  .page-desc {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .pb-12 { padding-bottom: var(--space-12); }
+  .pt-8 { padding-top: var(--space-8); }
+  .mt-base { margin-top: var(--space-4); }
+
+  .benefit-list {
+    list-style: none;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+  .benefit-list strong {
+    color: var(--text-main);
+  }
+
+  /* Chat UI Simulation */
+  .chat-mockup {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .chat-header {
+    padding: var(--space-3);
+    border-bottom: 1px solid var(--border-subtle);
+    font-weight: 600;
+    text-align: center;
+  }
+  .chat-body {
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  .msg {
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    font-size: 0.95rem;
+    max-width: 85%;
+  }
+  .msg.user {
+    background: rgba(255,255,255,0.05);
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+  }
+  .msg.ai {
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+  }
+
+  /* Voice UI Simulation */
+  .voice-mockup {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-6);
+    background: linear-gradient(135deg, rgba(20,20,21,0.5), rgba(6, 182, 212, 0.1));
+  }
+  
+  .voice-waves {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .voice-waves span {
+    display: block;
+    width: 6px;
+    background: var(--accent-secondary);
+    border-radius: 3px;
+    animation: sound 1s infinite alternate ease-in-out;
+  }
+  .voice-waves span:nth-child(1) { height: 20%; animation-delay: 0.1s; }
+  .voice-waves span:nth-child(2) { height: 60%; animation-delay: 0.2s; }
+  .voice-waves span:nth-child(3) { height: 100%; animation-delay: 0.3s; }
+  .voice-waves span:nth-child(4) { height: 50%; animation-delay: 0.4s; }
+  .voice-waves span:nth-child(5) { height: 30%; animation-delay: 0.5s; }
+
+  @keyframes sound {
+    0% { height: 20%; }
+    100% { height: 100%; }
+  }
+
+  .voice-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .page-title { font-size: 2.5rem; }
+  }
+</style>

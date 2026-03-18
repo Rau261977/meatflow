@@ -1,0 +1,97 @@
+---
+const links = [
+  { name: 'Platform', href: '/platform' },
+  { name: 'Features', href: '/features' },
+  { name: 'AI Assistant', href: '/ai-assistant' },
+  { name: 'Integrations', href: '/integrations' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'Enterprise', href: '/enterprise' },
+  { name: 'About', href: '/about' },
+];
+---
+
+<header class="navbar-wrapper glass-panel">
+  <div class="container navbar">
+    <a href="/" class="logo">
+      <img src="/logo-full.svg" alt="MeatFlow Logo" height="42" />
+    </a>
+    
+    <nav class="nav-links">
+      {links.map(link => (
+        <a href={link.href} class="nav-link">{link.name}</a>
+      ))}
+    </nav>
+    
+    <div class="nav-actions">
+      <a href="/contact" class="nav-link">Sign In</a>
+      <a href="/contact" class="btn btn-primary">Book Demo</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .navbar-wrapper {
+    position: fixed;
+    top: var(--space-3);
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - var(--space-6));
+    max-width: 1200px;
+    z-index: 100;
+    border-radius: var(--radius-full);
+    padding: var(--space-2) var(--space-4);
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    padding: 0;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+  
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+  
+  .logo-accent {
+    color: var(--accent-primary);
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: var(--space-4);
+    align-items: center;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  
+  .nav-link:hover {
+    color: var(--text-main);
+  }
+  
+  .nav-actions {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+  }
+
+  @media (max-width: 1024px) {
+    .nav-links {
+      display: none;
+    }
+  }
+</style>

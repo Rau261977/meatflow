@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FeatureBlock from '../components/FeatureBlock.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Platform Overview">
+  <div class="page-header container">
+    <h1 class="page-title">The Unified Operations Platform for <span class="text-gradient">Meat Retail</span></h1>
+    <p class="page-desc">MeatFlow is an integrated ecosystem connecting your POS, mobile ordering, multi-location operations, and customer data into a single, cohesive operating system.</p>
+  </div>
+
+  <section class="container mb-8">
+    <div class="architecture-diagram glass-panel">
+      <!-- Symbolic diagram using CSS -->
+      <div class="diagram-core">
+        <h3>MeatFlow Core Engine</h3>
+      </div>
+      <div class="diagram-nodes">
+        <div class="node">White-Label App</div>
+        <div class="node">Customer CRM</div>
+        <div class="node">Marketing Ops</div>
+        <div class="node">AI Assistant</div>
+      </div>
+      <div class="diagram-pos">
+        <div>MeatFlow integrates with your POS (Square, Toast, Clover, Lightspeed). <br/> It does not replace your hardware.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-8">
+    <div class="grid-2">
+      <Card title="White-Label Experience" icon="📱" description="Native iOS and Android applications branded entirely for your shop. Customers interact with your brand, not a third-party marketplace." />
+      <Card title="Customer CRM" icon="👥" description="Detailed profiles automatically built from every order, interaction, and physical store visit. Know your best customers instinctively." />
+      <Card title="Advanced Analytics" icon="📊" description="Dashboard reporting that merges digital and physical data. Track top cuts, peak hours, and campaign ROI in real-time." />
+      <Card title="Multi-Store Sync" icon="🏢" description="Built for scale. Share inventory catalogs across locations with granular control over pricing and availability per store." />
+    </div>
+  </section>
+
+  <section class="container pb-12">
+    <FeatureBlock
+      title="Marketing & AI Integrated"
+      description="The platform goes beyond ordering. It actively works to bring customers back using behavioral data and AI-driven personalization."
+      subtext="Automation"
+    >
+      <div slot="actions" class="mt-base">
+        <a href="/features" class="btn btn-primary">See All Features</a>
+      </div>
+    </FeatureBlock>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    text-align: center;
+    padding: var(--space-12) 0 var(--space-8);
+  }
+  
+  .page-title {
+    font-size: 3.5rem;
+    margin-bottom: var(--space-4);
+  }
+  
+  .page-desc {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .mt-base { margin-top: var(--space-4); }
+  .mb-8 { margin-bottom: var(--space-8); }
+  .py-8 { padding: var(--space-8) 0; }
+  .pb-12 { padding-bottom: var(--space-12); }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  .architecture-diagram {
+    padding: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+    background: linear-gradient(180deg, rgba(20,20,21,0.8), rgba(10,10,11,0.5));
+  }
+  
+  .diagram-core {
+    background: var(--accent-primary);
+    color: white;
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-glow);
+    text-align: center;
+    width: 300px;
+  }
+  
+  .diagram-nodes {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .node {
+    background: var(--bg-card);
+    border: 1px solid var(--border-strong);
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+  }
+  
+  .diagram-pos {
+    margin-top: var(--space-4);
+    padding-top: var(--space-6);
+    border-top: 1px dashed var(--border-strong);
+    width: 80%;
+    text-align: center;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .page-title { font-size: 2.5rem; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .diagram-nodes { flex-direction: column; }
+  }
+</style>

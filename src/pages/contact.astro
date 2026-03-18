@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact & Demo Request">
+  <div class="page-header container">
+    <h1 class="page-title">Speak with our <span class="text-gradient">team</span></h1>
+    <p class="page-desc">Schedule a brief demonstration with our product specialists to see how MeatFlow can optimize your operations.</p>
+  </div>
+
+  <section class="container pb-16">
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div class="info-block">
+          <h3>US Headquarters</h3>
+          <p>MeatFlow Inc.<br/>79 Madison Ave<br/>New York, NY 10016</p>
+        </div>
+        
+        <div class="info-block">
+          <h3>Email Us</h3>
+          <p>Sales: sales@meatflow.com<br/>Support: docs@meatflow.com</p>
+        </div>
+
+        <div class="info-block">
+          <h3>Why MeatFlow?</h3>
+          <ul class="benefit-list">
+            <li>✓ Modernize your customer experience</li>
+            <li>✓ Lower your third-party commissions</li>
+            <li>✓ Build a database you actually own</li>
+            <li>✓ Deploy AI that sells for you</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contact-form-container glass-panel">
+        <form class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" placeholder="Doe" required />
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" placeholder="john@yourmarket.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="shop-name">Shop Name</label>
+            <input type="text" id="shop-name" placeholder="Gourmet Meats NYC" required />
+          </div>
+
+          <div class="form-group">
+            <label for="pos">Current POS System</label>
+            <select id="pos">
+              <option value="">Select an option</option>
+              <option value="square">Square</option>
+              <option value="toast">Toast</option>
+              <option value="clover">Clover</option>
+              <option value="lightspeed">Lightspeed</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Anything else?</label>
+            <textarea id="message" rows="4" placeholder="Tell us about your goals..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full contact-btn">Request Demo</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    text-align: center;
+    padding: var(--space-12) 0 var(--space-8);
+  }
+  
+  .page-title {
+    font-size: 3.5rem;
+    margin-bottom: var(--space-4);
+  }
+  
+  .page-desc {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .pb-16 { padding-bottom: var(--space-16); }
+
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-12);
+    align-items: start;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .info-block h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-3);
+    color: var(--text-main);
+  }
+
+  .info-block p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+
+  .benefit-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    color: var(--text-muted);
+    margin-top: var(--space-2);
+  }
+
+  /* Form Styling */
+  .contact-form-container {
+    padding: var(--space-8);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-main);
+  }
+
+  input, select, textarea {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    color: white;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    transition: border-color var(--transition-fast);
+  }
+
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .btn-full {
+    width: 100%;
+    margin-top: var(--space-4);
+  }
+
+  .contact-btn {
+    padding: var(--space-4);
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 900px) {
+    .contact-wrapper { grid-template-columns: 1fr; gap: var(--space-12); }
+    .page-title { font-size: 2.8rem; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>

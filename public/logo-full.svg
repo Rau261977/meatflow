@@ -1,0 +1,18 @@
+<svg width="240" height="60" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Definition for a Premium Look -->
+  <defs>
+    <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Abstract "M" + "Flow" Icon -->
+  <!-- A geometric, interlocking shape representing layers and connection -->
+  <path d="M8 16C8 12.6863 10.6863 10 14 10H30C33.3137 10 36 12.6863 36 16V32C36 35.3137 33.3137 38 30 38H14C10.6863 38 8 35.3137 8 32V16Z" fill="url(#logo-grad)"/>
+
+  <!-- Typography: Using a more sophisticated font weight and color hierarchy -->
+  <text x="52" y="38" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="26" letter-spacing="-0.04em" fill="#E2E8F0">
+    Meat<tspan fill="#4F46E5">Flow</tspan>
+  </text>
+</svg>

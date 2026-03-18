@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About MeatFlow">
+  <div class="page-header container">
+    <h1 class="page-title">The Future of <br/> <span class="text-gradient">Specialty Retail</span></h1>
+    <p class="page-desc">We build technology for the world's most essential food businesses, focused on automation, AI, and superior customer experiences.</p>
+  </div>
+
+  <section class="container py-12">
+    <div class="vision-grid">
+      <div class="vision-content">
+        <h2>Our Vision</h2>
+        <p>MeatFlow was founded to provide independent butcher shops and premium food retailers with the same level of technology used by global enterprises. We believe that professional craftsmanship shouldn't be limited by legacy software.</p>
+        <p>By combining deep industry specialization with modern automation, we empower artisans to scale their business while maintaining the personal service that defines their brand.</p>
+      </div>
+      <div class="vision-visual glass-panel">
+        <div class="stat-item">
+          <span class="stat-value">AI-First</span>
+          <span class="stat-label">Automation for every shop</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">99.9%</span>
+          <span class="stat-label">Platform Reliability</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">USA</span>
+          <span class="stat-label">Proudly based in the US</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-12 border-top">
+    <div class="values-grid">
+      <div class="value-card">
+        <h3>Innovation</h3>
+        <p>We are constantly pushing the boundaries of what's possible with AI and mobile commerce in the meat industry.</p>
+      </div>
+      <div class="value-card">
+        <h3>Reliability</h3>
+        <p>Your shop never stops, and neither do we. Our enterprise-grade infrastructure ensures 24/7 availability.</p>
+      </div>
+      <div class="value-card">
+        <h3>Customer Success</h3>
+        <p>We only win when our partners grow. Every feature we build is designed to drive higher ROI for your shop.</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    text-align: center;
+    padding: var(--space-12) 0 var(--space-8);
+  }
+  
+  .page-title {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: var(--space-6);
+  }
+  
+  .page-desc {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .py-12 { padding: var(--space-12) 0; }
+  .border-top { border-top: 1px solid var(--border-subtle); }
+
+  .vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+    align-items: center;
+  }
+
+  .vision-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-6);
+  }
+
+  .vision-content p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: var(--space-4);
+  }
+
+  .vision-visual {
+    padding: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    background: linear-gradient(135deg, rgba(20,20,21,0.5), rgba(59, 130, 246, 0.05));
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    color: var(--text-muted);
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+  }
+
+  .value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-4);
+    color: var(--accent-primary);
+  }
+
+  .value-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .vision-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+    .values-grid { grid-template-columns: 1fr; }
+    .page-title { font-size: 3rem; }
+  }
+</style>

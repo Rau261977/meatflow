@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FeatureBlock from '../components/FeatureBlock.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Enterprise Solutions">
+  <div class="page-header container">
+    <div class="badge inline-badge">Enterprise Edition</div>
+    <h1 class="page-title">Scalability Without <span class="text-gradient">Friction</span></h1>
+    <p class="page-desc">MeatFlow is engineered for franchises, multi-location markets, and large-scale food retail networks requiring centralized governance and robust architecture.</p>
+    <div class="header-actions">
+      <a href="/contact" class="btn btn-primary btn-lg mt-base">Speak with Enterprise Sales</a>
+    </div>
+  </div>
+
+  <section class="container py-8">
+    <div class="grid-3">
+      <Card title="Multi-Store Management" icon="🏢" description="Control menus, pricing variations, and promotions across 5 or 500 locations from a single dashboard." />
+      <Card title="Custom Integrations" icon="🔌" description="Dedicated engineering support to integrate with legacy ERPs, custom fulfillment centers, and unique payment processors." />
+      <Card title="Dedicated Support" icon="🛡️" description="24/7 dedicated account manager, prioritized SLA, and tailored onboarding for massive catalogs." />
+    </div>
+  </section>
+
+  <section class="container py-12">
+    <FeatureBlock
+      title="Franchise Operations Ready"
+      description="Give regional managers the control they need while maintaining strict brand standards at the corporate level. MeatFlow handles complex taxonomy, split payouts, and multi-tenant architectures."
+      image="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    >
+      <div slot="actions">
+        <ul class="feature-list mt-base">
+          <li>✓ Hierarchical permissions model</li>
+          <li>✓ Multi-Tax compliance engine</li>
+          <li>✓ Unified corporate reporting</li>
+        </ul>
+      </div>
+    </FeatureBlock>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    text-align: center;
+    padding: var(--space-12) 0 var(--space-8);
+  }
+  
+  .inline-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    padding: 6px 16px;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    border: 1px solid var(--border-strong);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .page-title {
+    font-size: 4rem;
+    margin-bottom: var(--space-4);
+  }
+  
+  .page-desc {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  
+  .header-actions {
+    margin-top: var(--space-6);
+  }
+  
+  .btn-lg {
+    padding: var(--space-3) var(--space-8);
+    font-size: 1.1rem;
+  }
+
+  .mt-base { margin-top: var(--space-4); }
+  .py-8 { padding: var(--space-8) 0; }
+  .py-12 { padding: var(--space-12) 0; }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+  
+  .feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    color: var(--text-muted);
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 900px) {
+    .page-title { font-size: 3rem; }
+    .grid-3 { grid-template-columns: 1fr; }
+  }
+</style>

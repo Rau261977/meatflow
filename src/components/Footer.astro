@@ -1,0 +1,134 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="logo">
+        <img src="/logo-full.svg" alt="MeatFlow Logo" height="38" />
+      </a>
+      <p class="brand-desc">
+        The premium AI-powered customer engagement and ordering platform for modern butcher shops and specialty food retailers.
+      </p>
+    </div>
+    
+    <div class="footer-links">
+      <h4>Platform</h4>
+      <a href="/platform">Overview</a>
+      <a href="/features">Features</a>
+      <a href="/ai-assistant">AI Assistant</a>
+      <a href="/integrations">Integrations</a>
+    </div>
+    
+    <div class="footer-links">
+      <h4>Company</h4>
+      <a href="/about">About Us</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/enterprise">Enterprise</a>
+      <a href="/contact">Contact</a>
+    </div>
+    
+    <div class="footer-links">
+      <h4>Legal</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Security</a>
+    </div>
+  </div>
+  
+  <div class="container footer-bottom">
+    <p>&copy; {currentYear} MeatFlow Inc. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--bg-darker);
+    border-top: 1px solid var(--border-subtle);
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-6);
+    margin-top: var(--space-16);
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--space-8);
+    margin-bottom: var(--space-8);
+  }
+  
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: var(--space-4);
+  }
+  
+  .logo-accent {
+    color: var(--accent-primary);
+  }
+  
+  .brand-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 320px;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .footer-links h4 {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    margin-bottom: var(--space-2);
+  }
+  
+  .footer-links a {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+  
+  .footer-links a:hover {
+    color: var(--accent-primary);
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: var(--space-4);
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+    .footer-bottom {
+      flex-direction: column;
+      gap: var(--space-4);
+      text-align: center;
+    }
+  }
+</style>
