@@ -1,7 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import FeatureBlock from '../components/FeatureBlock.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import FeatureBlock from "../components/FeatureBlock.astro";
 ---
 
 <Layout title="Run your meat business smarter">
@@ -12,11 +12,12 @@ import FeatureBlock from '../components/FeatureBlock.astro';
         <span class="badge-dot"></span> Professional Operations Platform
       </div>
       <h1 class="hero-title">
-        Run your meat <br/>
+        Run your meat <br />
         <span class="text-gradient-accent">business smarter</span>
       </h1>
       <p class="hero-subtitle">
-        Customer engagement, ordering, and automation platform built for modern meat businesses.
+        Customer engagement, ordering, and automation platform built for modern
+        meat businesses.
       </p>
       <div class="hero-actions">
         <a href="/contact" class="btn btn-primary btn-lg">Request demo</a>
@@ -64,21 +65,24 @@ import FeatureBlock from '../components/FeatureBlock.astro';
   <section class="features-grid-section container">
     <div class="section-header text-center">
       <h2 class="section-title">Engineered for growth</h2>
-      <p class="section-subtitle">MeatFlow integrates enterprise-grade automation and customer intelligence into your existing digital infrastructure.</p>
+      <p class="section-subtitle">
+        MeatFlow integrates enterprise-grade automation and customer
+        intelligence into your existing digital infrastructure.
+      </p>
     </div>
-    
+
     <div class="grid-3">
-      <Card 
+      <Card
         icon="📱"
         title="Customer Mobile App"
         description="Launch your own branded iOS and Android applications for high-conversion mobile ordering and loyalty."
       />
-      <Card 
+      <Card
         icon="🧠"
-        title="AI Assistant"
+        title="Intelligence Assistant"
         description="Deploy an intelligent assistant to automate recommendations and pairing suggestions for your customers."
       />
-      <Card 
+      <Card
         icon="📈"
         title="Growth Automation"
         description="Execute data-driven campaigns to reward loyalty and win back customers through automated workflows."
@@ -91,11 +95,20 @@ import FeatureBlock from '../components/FeatureBlock.astro';
     <div class="grid-2">
       <div class="trust-block">
         <h3>Built for Meat Businesses</h3>
-        <p>MeatFlow is specifically engineered for the unique taxonomy and operational requirements of high-volume specialty meat retail. From weight-based variations to complex inventory matrices, we understand your business.</p>
+        <p>
+          MeatFlow is specifically engineered for the unique taxonomy and
+          operational requirements of high-volume specialty meat retail. From
+          weight-based variations to complex inventory matrices, we understand
+          your business.
+        </p>
       </div>
       <div class="trust-block">
         <h3>Secure and Scalable</h3>
-        <p>Leverage an enterprise-grade cloud infrastructure designed to scale from single-location artisan shops to national franchise networks with 99.9% guaranteed uptime.</p>
+        <p>
+          Leverage an enterprise-grade cloud infrastructure designed to scale
+          from single-location artisan shops to national franchise networks with
+          99.9% guaranteed uptime.
+        </p>
       </div>
     </div>
   </section>
@@ -114,7 +127,9 @@ import FeatureBlock from '../components/FeatureBlock.astro';
           <li>✓ Location-specific diagnostics</li>
           <li>✓ Cross-channel loyalty data</li>
         </ul>
-        <a href="/enterprise" class="btn btn-secondary mt-base">See how it works</a>
+        <a href="/enterprise" class="btn btn-secondary mt-base"
+          >See how it works</a
+        >
       </div>
     </FeatureBlock>
 
@@ -140,7 +155,10 @@ import FeatureBlock from '../components/FeatureBlock.astro';
   <section class="cta-section container">
     <div class="cta-card glass-panel text-center">
       <h2>The platform for modern meat markets</h2>
-      <p class="cta-desc">Join leading US specialty retailers using MeatFlow to modernize their customer experience.</p>
+      <p class="cta-desc">
+        Join leading US specialty retailers using MeatFlow to modernize their
+        customer experience.
+      </p>
       <div class="cta-actions">
         <a href="/contact" class="btn btn-primary btn-lg">Book a call</a>
       </div>
@@ -153,7 +171,7 @@ import FeatureBlock from '../components/FeatureBlock.astro';
   .mt-base {
     margin-top: var(--space-4);
   }
-  
+
   .text-center {
     text-align: center;
   }
@@ -178,7 +196,7 @@ import FeatureBlock from '../components/FeatureBlock.astro';
     margin-bottom: var(--space-6);
     color: var(--text-muted);
   }
-  
+
   .badge-dot {
     width: 8px;
     height: 8px;
@@ -224,7 +242,7 @@ import FeatureBlock from '../components/FeatureBlock.astro';
     transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
     transition: transform 0.5s ease;
   }
-  
+
   .mockup-frame:hover {
     transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
   }
@@ -236,7 +254,7 @@ import FeatureBlock from '../components/FeatureBlock.astro';
     align-items: center;
     padding: 0 var(--space-3);
     gap: var(--space-3);
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
   }
 
   .dots {
@@ -254,7 +272,7 @@ import FeatureBlock from '../components/FeatureBlock.astro';
   .url {
     font-size: 0.7rem;
     color: var(--text-muted);
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     padding: 2px 10px;
     border-radius: var(--radius-sm);
     flex-grow: 1;
@@ -269,7 +287,7 @@ import FeatureBlock from '../components/FeatureBlock.astro';
   .mockup-sidebar {
     width: 60px;
     border-right: 1px solid var(--border-subtle);
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
   }
 
   .mockup-content {
@@ -281,7 +299,7 @@ import FeatureBlock from '../components/FeatureBlock.astro';
   }
 
   .mockup-card {
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.03);
     border-radius: var(--radius-md);
     border: 1px solid var(--border-subtle);
   }
@@ -300,7 +318,7 @@ import FeatureBlock from '../components/FeatureBlock.astro';
 
   .mockup-metric {
     flex: 1;
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.03);
     border-radius: var(--radius-md);
     border: 1px solid var(--border-subtle);
   }
@@ -333,7 +351,9 @@ import FeatureBlock from '../components/FeatureBlock.astro';
     font-weight: 700;
     color: var(--text-muted);
     opacity: 0.7;
-    transition: opacity var(--transition-normal), color var(--transition-normal);
+    transition:
+      opacity var(--transition-normal),
+      color var(--transition-normal);
   }
 
   .logo-item:hover {
@@ -387,7 +407,7 @@ import FeatureBlock from '../components/FeatureBlock.astro';
     font-size: 1.1rem;
     max-width: 500px;
   }
-  
+
   /* Deep Dive Section */
   .deep-dive-section {
     padding: var(--space-8) var(--space-4);
@@ -417,12 +437,19 @@ import FeatureBlock from '../components/FeatureBlock.astro';
     position: relative;
     overflow: hidden;
   }
-  
+
   .cta-card::before {
-    content: '';
+    content: "";
     position: absolute;
-    top: 0; left: 0; right: 0; height: 4px;
-    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(
+      90deg,
+      var(--accent-primary),
+      var(--accent-secondary)
+    );
   }
 
   .cta-card h2 {
@@ -446,19 +473,19 @@ import FeatureBlock from '../components/FeatureBlock.astro';
       text-align: center;
       gap: var(--space-12);
     }
-    
+
     .hero-badge {
       margin: 0 auto var(--space-6);
     }
-    
+
     .hero-subtitle {
       margin: 0 auto var(--space-6);
     }
-    
+
     .hero-actions {
       justify-content: center;
     }
-    
+
     .grid-3 {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -468,15 +495,15 @@ import FeatureBlock from '../components/FeatureBlock.astro';
     .hero-title {
       font-size: 3rem;
     }
-    
+
     .grid-3 {
       grid-template-columns: 1fr;
     }
-    
+
     .cta-card h2 {
       font-size: 2.5rem;
     }
-    
+
     .hero-actions {
       flex-direction: column;
     }
